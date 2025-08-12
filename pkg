@@ -46,17 +46,21 @@ release() {
     local VERSION
     VERSION=$(cat VERSION | sed 's/^v//')
     local ARCHIVE_NAME="usgc-themes-v$VERSION.tar.gz"
+    local LATEST_ARCHIVE_NAME="usgc-themes.tar.gz"
 
     # Create a tar.gz archive excluding unnecessary files
     tar --exclude='.git' --exclude='pkg' --exclude='VERSION' -czf "$ARCHIVE_NAME" .
 
-    # Create a GitHub release and upload the archive
-    gh release create "v$VERSION" "$ARCHIVE_NAME" --title "Release v$VERSION" --notes "Automated release for version v$VERSION"
+    # Create a copy with a consistent name for the latest release
+    cp "$ARCHIVE_NAME" "$LATEST_ARCHIVE_NAME"
 
-    # Delete the archive after upload
-    rm -f "$ARCHIVE_NAME"
+    # Create a GitHub release and upload both archives
+    gh release create "v$VERSION" "$ARCHIVE_NAME" "$LATEST_ARCHIVE_NAME" --title "Release v$VERSION" --notes "Automated release for version v$VERSION"
 
-    echo "GitHub release created and archive deleted: $ARCHIVE_NAME"
+    # Delete the archives after upload
+    rm -f "$ARCHIVE_NAME" "$LATEST_ARCHIVE_NAME"
+
+    echo "GitHub release created and archives deleted: $ARCHIVE_NAME, $LATEST_ARCHIVE_NAME"
 }
 publish() {
     increment_version
