@@ -19,7 +19,6 @@
     	"brown": "#666600",
     	"gray": "#999999"
     },
-    
     "globals": {
         "background": "var(black)",
         "foreground": "var(fl_cyan)",
