@@ -1,0 +1,39 @@
+{
+    "name": "USGC-LAPLACIAN-ST",
+    "variables": {
+    	"black": "#000000",
+    	"white": "#FFFFFF",
+    	"fl_red": "#FF0000",
+    	"fl_green": "#00FF00",
+    	"fl_blue": "#0000FF",
+    	"fl_cyan": "#00FFFF",
+    	"fl_magenta": "#FF00FF",
+    	"fl_yellow": "#FFFF00",
+    	"fl_orange": "#FF6600",
+    	"red": "#660000",
+    	"green": "#00A645",
+    	"blue": "#000066",
+    	"cyan": "#006666",
+    	"magenta": "#660066",
+    	"yellow": "#FFBF00",
+    	"brown": "#666600",
+    	"gray": "#999999"
+    },
+    "globals": {
+        "background": "var(black)",
+        "foreground": "var(fl_magenta)",
+        "caret": "var(white)",
+        "block_caret": "var(white)",
+        "selection": "var(blue)",
+        "selection_foreground": "var(fl_yellow)",
+        "selection_corner_style": "cut",
+        "selection_corner_radius": "2",
+        "inactive_selection": "var(gray)",
+        "inactive_selection_foreground": "var(fl_blue)",
+        "inactive_sheet_dimming": "0",
+        "gutter": "var(black)",
+        "gutter_foreground": "var(fl_blue)",
+        "line_highlight": "var(fl_yellow)",
+        "gutter_foreground_highlight": "var(black)"
+    }
+}
