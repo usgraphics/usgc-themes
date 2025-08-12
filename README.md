@@ -11,15 +11,15 @@ Settings > Browse Packages... > Paste theme files in this directory.
 
 U.S. Graphics Company internal part numbers.
 ```text
-┌─────────────┬─────────────┬───────────────────────┐
-│ PART NUMBER │ THEME NAME  │ DESCRIPTION           │
-├─────────────┼─────────────┼───────────────────────┤
-│ 5200-010    │ HIGHK       │ White color scheme    │
-│ 5200-020    │ AMHS        │ Dark color scheme     │
-│ 5200-030    │ POLYIMIDE   │ Amber color scheme    │
-│ 5200-040    │ EPITAXY     │ Magenta color scheme  │
-│ 5200-050    │ METALGATE   │ Cyan color scheme     │
-└─────────────┴─────────────┴───────────────────────┘
+┌─────────────┬─────────────┬────────────────┬──────────────────────────────────┐
+│ PART NUMBER │ THEME NAME  │ DESCRIPTION    │ COMMENT                          │
+├─────────────┼─────────────┼────────────────┼──────────────────────────────────┤
+│ 5200-010    │ HIGHK       │ White scheme   │ High dielectric constant         │
+│ 5200-020    │ AMHS        │ Dark scheme    │ Auto Material Handling Systems   │
+│ 5200-030    │ POLYIMIDE   │ Amber scheme   │ Heat-resistant polymer           │
+│ 5200-040    │ EPITAXY     │ Magenta scheme │ Crystal layer growth             │
+│ 5200-050    │ METALGATE   │ Cyan  cheme    │ Metal gate transistor            │
+└─────────────┴─────────────┴────────────────┴──────────────────────────────────┘
 ```
 
 Theme file names are formatted as `USGC-<THEME NAME>-<SOFTWARE CODE>`.
