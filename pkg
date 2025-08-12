@@ -61,6 +61,7 @@ release() {
     rm -f "$ARCHIVE_NAME" "$LATEST_ARCHIVE_NAME"
 
     echo "GitHub release created and archives deleted: $ARCHIVE_NAME, $LATEST_ARCHIVE_NAME"
+    echo "Release link https://github.com/usgraphics/usgc-themes/releases/latest/download/usgc-themes.tar.gz"
 }
 publish() {
     increment_version
