@@ -75,7 +75,7 @@ parse_args() {
     COMMAND=""
     while [[ $# -gt 0 ]]; do
         case "$1" in
-            release|build|deploy|restart|reset|rollback|all|clone|clone_from_s3)
+            release|build|all)
                 COMMAND="$1"
                 shift
                 ;;
