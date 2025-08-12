@@ -7,14 +7,15 @@ Download and obtain a license here: https://www.sublimetext.com/
 ### Installation
 Settings > Browse Packages... > Paste theme files in this directory.
 
-### Part Numbers
+### Themes list
+
 U.S. Graphics Company internal part numbers.
 ```text
 ┌─────────────┬─────────────┬───────────────────────┐
 │ PART NUMBER │ THEME NAME  │ DESCRIPTION           │
 ├─────────────┼─────────────┼───────────────────────┤
 │ 5200-010    │ HAZMAT      │ White color scheme    │
-│ 5200-020    │ INTERLOCK   │ Dark color scheme     │
+│ 5200-020    │ PROTOCOL    │ Dark color scheme     │
 │ 5200-030    │ POLYIMIDE   │ Amber color scheme    │
 │ 5200-040    │ LAPLACIAN   │ Magenta color scheme  │
 │ 5200-050    │ RADIONICS   │ Cyan color scheme     │
