@@ -1,5 +1,5 @@
 {
-    "name": "USGC-RADIONICS-ST",
+    "name": "USGC-HIGH-K-ST",
     "variables": {
     	"black": "#000000",
     	"white": "#FFFFFF",
@@ -20,20 +20,20 @@
     	"gray": "#999999"
     },
     "globals": {
-        "background": "var(black)",
-        "foreground": "var(fl_cyan)",
+        "background": "var(white)",
+        "foreground": "var(black)",
         "caret": "var(fl_blue)",
         "block_caret": "var(fl_blue)",
-        "selection": "var(brown)",
-        "selection_foreground": "var(fl_yellow)",
+        "selection": "var(fl_green)",
+        "selection_foreground": "var(black)",
         "selection_corner_style": "cut",
         "selection_corner_radius": "2",
         "inactive_selection": "var(gray)",
         "inactive_selection_foreground": "var(fl_blue)",
         "inactive_sheet_dimming": "0",
-        "gutter": "var(black)",
-        "gutter_foreground": "var(fl_yellow)",
-        "line_highlight": "var(fl_blue)",
-        "gutter_foreground_highlight": "var(fl_cyan)"
+        "gutter": "var(white)",
+        "gutter_foreground": "var(fl_red)",
+        "gutter_foreground_highlight": "var(black)",
+        "line_highlight": "var(fl_green)",
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "USGC-HAZMAT-ST",
+    "name": "USGC-AMHS-ST",
     "variables": {
     	"black": "#000000",
     	"white": "#FFFFFF",
@@ -20,20 +20,20 @@
     	"gray": "#999999"
     },
     "globals": {
-        "background": "var(white)",
-        "foreground": "var(black)",
-        "caret": "var(fl_blue)",
-        "block_caret": "var(fl_blue)",
-        "selection": "var(fl_green)",
-        "selection_foreground": "var(black)",
+        "background": "var(black)",
+        "foreground": "var(green)",
+        "caret": "var(white)",
+        "block_caret": "var(white)",
+        "selection": "var(white)",
+        "selection_foreground": "var(fl_blue)",
         "selection_corner_style": "cut",
         "selection_corner_radius": "2",
         "inactive_selection": "var(gray)",
         "inactive_selection_foreground": "var(fl_blue)",
         "inactive_sheet_dimming": "0",
-        "gutter": "var(white)",
+        "gutter": "var(black)",
         "gutter_foreground": "var(fl_red)",
-        "gutter_foreground_highlight": "var(black)",
-        "line_highlight": "var(fl_green)",
+        "line_highlight": "var(fl_blue)",
+        "gutter_foreground_highlight": "var(white)"
     }
 }

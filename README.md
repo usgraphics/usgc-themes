@@ -14,11 +14,11 @@ U.S. Graphics Company internal part numbers.
 ┌─────────────┬─────────────┬───────────────────────┐
 │ PART NUMBER │ THEME NAME  │ DESCRIPTION           │
 ├─────────────┼─────────────┼───────────────────────┤
-│ 5200-010    │ HAZMAT      │ White color scheme    │
-│ 5200-020    │ PROTOCOL    │ Dark color scheme     │
+│ 5200-010    │ HIGHK       │ White color scheme    │
+│ 5200-020    │ AMHS        │ Dark color scheme     │
 │ 5200-030    │ POLYIMIDE   │ Amber color scheme    │
-│ 5200-040    │ LAPLACIAN   │ Magenta color scheme  │
-│ 5200-050    │ RADIONICS   │ Cyan color scheme     │
+│ 5200-040    │ EPITAXY     │ Magenta color scheme  │
+│ 5200-050    │ METALGATE   │ Cyan color scheme     │
 └─────────────┴─────────────┴───────────────────────┘
 ```
 

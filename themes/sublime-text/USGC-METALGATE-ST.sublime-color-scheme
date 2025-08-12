@@ -1,5 +1,5 @@
 {
-    "name": "USGC-PROTOCOL-ST",
+    "name": "USGC-METALGATE-ST",
     "variables": {
     	"black": "#000000",
     	"white": "#FFFFFF",
@@ -21,19 +21,19 @@
     },
     "globals": {
         "background": "var(black)",
-        "foreground": "var(green)",
-        "caret": "var(white)",
-        "block_caret": "var(white)",
-        "selection": "var(white)",
-        "selection_foreground": "var(fl_blue)",
+        "foreground": "var(fl_cyan)",
+        "caret": "var(fl_blue)",
+        "block_caret": "var(fl_blue)",
+        "selection": "var(brown)",
+        "selection_foreground": "var(fl_yellow)",
         "selection_corner_style": "cut",
         "selection_corner_radius": "2",
         "inactive_selection": "var(gray)",
         "inactive_selection_foreground": "var(fl_blue)",
         "inactive_sheet_dimming": "0",
         "gutter": "var(black)",
-        "gutter_foreground": "var(fl_red)",
+        "gutter_foreground": "var(fl_yellow)",
         "line_highlight": "var(fl_blue)",
-        "gutter_foreground_highlight": "var(white)"
+        "gutter_foreground_highlight": "var(fl_cyan)"
     }
 }
