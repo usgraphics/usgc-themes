@@ -53,7 +53,10 @@ release() {
     # Create a GitHub release and upload the archive
     gh release create "v$VERSION" "$ARCHIVE_NAME" --title "Release v$VERSION" --notes "Automated release for version v$VERSION"
 
-    echo "GitHub release created with archive: $ARCHIVE_NAME"
+    # Delete the archive after upload
+    rm -f "$ARCHIVE_NAME"
+
+    echo "GitHub release created and archive deleted: $ARCHIVE_NAME"
 }
 publish() {
     increment_version
