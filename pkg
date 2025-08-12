@@ -1,0 +1,127 @@
+#!/bin/bash
+set -euo pipefail
+
+# Default level is patch
+LEVEL=${LEVEL:-patch}
+
+increment_version() {
+    local VERSION_FILE="VERSION"
+    if [[ ! -f $VERSION_FILE ]]; then
+        echo "v0.0.0" > $VERSION_FILE
+    fi
+
+    local CURRENT_VERSION
+    CURRENT_VERSION=$(cat $VERSION_FILE | sed 's/^v//')
+    echo "Current version: $CURRENT_VERSION"
+    IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
+
+    case $LEVEL in
+        major) MAJOR=$((MAJOR + 1)); MINOR=0; PATCH=0 ;;
+        minor) MINOR=$((MINOR + 1)); PATCH=0 ;;
+        patch) PATCH=$((PATCH + 1)) ;;
+        *) echo "Invalid level: $LEVEL"; exit 1 ;;
+    esac
+
+    local NEW_VERSION="v$MAJOR.$MINOR.$PATCH"
+    echo "New version: $NEW_VERSION"
+    echo "$NEW_VERSION" > $VERSION_FILE
+}
+
+git_commit_and_tag() {
+    local VERSION
+    VERSION=$(cat VERSION | sed 's/^v//')
+    git add .
+    git commit -m "$(echo $LEVEL | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}') release v$VERSION"
+    git tag "v$VERSION"
+    echo "Tagged commit with version: v$VERSION"
+}
+git_push() {
+    local VERSION
+    VERSION=$(cat VERSION | sed 's/^v//')
+    git push origin master
+    git push origin "v$VERSION"
+    echo "Pushed commit and tag to remote origin"
+}
+build() {
+    local VERSION
+    VERSION=$(cat VERSION | sed 's/^v//')
+    local ARCHIVE_NAME="usgc-themes-v$VERSION.tar.gz"
+
+    # Create a tar.gz archive excluding unnecessary files
+    tar --exclude='.git' --exclude='pkg' --exclude='VERSION' -czf "$ARCHIVE_NAME" .
+
+    # Create a GitHub release and upload the archive
+    gh release create "v$VERSION" "$ARCHIVE_NAME" --title "Release v$VERSION" --notes "Automated release for version v$VERSION"
+
+    echo "GitHub release created with archive: $ARCHIVE_NAME"
+}
+release() {
+    increment_version
+    git_commit_and_tag
+    git_push
+}
+
+usage() {
+    echo "Usage: $0 <command> [options] [environment]"
+    echo "Commands:"
+    echo "  release [--level|-l <major|minor|patch>]  - Increment version, commit, tag and push"
+    echo "  build                                     - Build and publish Docker image"
+    echo "  all <env>                                 - Release, build and deploy"
+    exit 1
+}
+
+parse_args() {
+    LEVEL="patch" # Default level
+    COMMAND=""
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            release|build|deploy|restart|reset|rollback|all|clone|clone_from_s3)
+                COMMAND="$1"
+                shift
+                ;;
+            --level|-l)
+                LEVEL="$2"
+                shift 2
+                ;;
+            *)
+                if [[ -z "$COMMAND" ]]; then
+                    echo "Error: Unknown command $1"
+                    usage
+                else
+                    # Pass remaining args to the command handler
+                    break
+                fi
+                ;;
+        esac
+    done
+    # Store remaining arguments
+    ARGS=("$@")
+    if [[ -z "$COMMAND" ]]; then
+        usage
+    fi
+}
+
+# Update your main function
+main() {
+    parse_args "$@"
+
+    case "$COMMAND" in
+        release)
+            release
+            ;;
+        build)
+            [[ ${#ARGS[@]} -eq 1 ]] || usage
+            deploy "${ARGS[0]}"
+            ;;
+        all)
+            [[ ${#ARGS[@]} -eq 1 ]] || usage
+            release
+            deploy "${ARGS[0]}"
+            ;;
+        *)
+            usage
+            ;;
+    esac
+}
+
+main "$@"
