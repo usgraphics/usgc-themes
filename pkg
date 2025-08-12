@@ -42,7 +42,7 @@ git_push() {
     git push origin "v$VERSION"
     echo "Pushed commit and tag to remote origin"
 }
-build() {
+release() {
     local VERSION
     VERSION=$(cat VERSION | sed 's/^v//')
     local ARCHIVE_NAME="usgc-themes-v$VERSION.tar.gz"
@@ -55,7 +55,7 @@ build() {
 
     echo "GitHub release created with archive: $ARCHIVE_NAME"
 }
-release() {
+publish() {
     increment_version
     git_commit_and_tag
     git_push
@@ -64,9 +64,9 @@ release() {
 usage() {
     echo "Usage: $0 <command> [options] [environment]"
     echo "Commands:"
-    echo "  release [--level|-l <major|minor|patch>]  - Increment version, commit, tag and push"
-    echo "  build                                     - Build and publish Docker image"
-    echo "  all <env>                                 - Release, build and deploy"
+    echo "  publish [--level|-l <major|minor|patch>]  - Increment version, commit, tag and push"
+    echo "  release                                   - Build and publish release on Github.com"
+    echo "  all <env>                                 - Publish, build and release"
     exit 1
 }
 
@@ -75,7 +75,7 @@ parse_args() {
     COMMAND=""
     while [[ $# -gt 0 ]]; do
         case "$1" in
-            release|build|all)
+            release|publish|all)
                 COMMAND="$1"
                 shift
                 ;;
@@ -101,27 +101,24 @@ parse_args() {
     fi
 }
 
-# Update your main function
 main() {
     parse_args "$@"
 
     case "$COMMAND" in
+        publish)
+            publish
+            ;;
         release)
             release
-            ;;
-        build)
-            [[ ${#ARGS[@]} -eq 1 ]] || usage
-            build "${ARGS[0]}"
             ;;
         all)
             [[ ${#ARGS[@]} -eq 1 ]] || usage
             release
-            deploy "${ARGS[0]}"
+            build "${ARGS[0]}"
             ;;
         *)
             usage
             ;;
     esac
 }
-
 main "$@"
