@@ -61,6 +61,7 @@ Theme file names are formatted as `USGC-<THEME NAME>-<SOFTWARE CODE>`.
 
 These themes work best with the following settings in your `Preferences.sublime-settings` file:
 
+<img width="600" alt="usgc-theme-colors" src="https://github.com/user-attachments/assets/f0210f2a-9468-48d9-9ecf-30547e601526" />
 
 WARNING: `vim` mode is active in this settings file.
 ```json
