@@ -111,7 +111,7 @@ main() {
             ;;
         build)
             [[ ${#ARGS[@]} -eq 1 ]] || usage
-            deploy "${ARGS[0]}"
+            build "${ARGS[0]}"
             ;;
         all)
             [[ ${#ARGS[@]} -eq 1 ]] || usage
