@@ -15,7 +15,7 @@ U.S. Graphics Company internal part numbers.
 │ PART NUMBER │ THEME NAME  │ DESCRIPTION    │ COMMENT                          │
 ├─────────────┼─────────────┼────────────────┼──────────────────────────────────┤
 │ 5200-010    │ HIGHK       │ White scheme   │ High dielectric constant         │
-│ 5200-020    │ AMHS        │ Dark scheme    │ Auto Material Handling Systems   │
+│ 5200-020    │ RETICLE     │ Dark scheme    │ Photomask for lithography        │
 │ 5200-030    │ POLYIMIDE   │ Amber scheme   │ Heat-resistant polymer           │
 │ 5200-040    │ EPITAXY     │ Magenta scheme │ Crystal layer growth             │
 │ 5200-050    │ METALGATE   │ Cyan  cheme    │ Metal gate transistor            │
@@ -66,7 +66,7 @@ WARNING: `vim` mode is active in this settings file.
 ```json
 {
 	"theme": "Adaptive.sublime-theme",
-	"color_scheme": "USGC-AMHS-ST.sublime-color-scheme",
+	"color_scheme": "USGC-RETICLE-ST.sublime-color-scheme",
 	"theme_font_options": ["no_italic"],
 	"auto_complete": true,
 	"caret_blink_interval": 0.5,
@@ -101,8 +101,8 @@ Here is the updated flowing table with a merged header column:
 
 Here is the updated Markdown table with all text in code format and without bold formatting:
 
-| U.S. Graphics Company Themes |                                                                                      |
-|------------------------|-------------------------------------------------------------------------------------------|
-| `HIGHK`<br>`USGC-HIGHK-ST`<br>`PN#: 5200-010`<br><img width="460" alt="HIGHK" src="https://github.com/user-attachments/assets/fe0ebfa7-2725-4eb0-bd67-5d316daa8a63" /> | `AMHS`<br>`USGC-AMHS-ST`<br>`PN#: 5200-020`<br><img width="460" alt="AMHS" src="https://github.com/user-attachments/assets/d5c16dec-2374-4dc3-8e61-d756eb345b65" /> |
+| U.S. Graphics Company Themes |                                                                                                                                                                              |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `HIGHK`<br>`USGC-HIGHK-ST`<br>`PN#: 5200-010`<br><img width="460" alt="HIGHK" src="https://github.com/user-attachments/assets/fe0ebfa7-2725-4eb0-bd67-5d316daa8a63" /> | `RETICLE`<br>`USGC-RETICLE-ST`<br>`PN#: 5200-020`<br><img width="460" alt="RETICLE" src="https://github.com/user-attachments/assets/d5c16dec-2374-4dc3-8e61-d756eb345b65" /> |
 | `POLYIMIDE`<br>`USGC-POLYIMIDE-ST`<br>`PN#: 5200-030`<br><img width="460" alt="POLYIMIDE" src="https://github.com/user-attachments/assets/05e4576a-6006-4f01-9a08-a5b54e05d21d" /> | `EPITAXY`<br>`USGC-EPITAXY-ST`<br>`PN#: 5200-040`<br><img width="460" alt="EPITAXY" src="https://github.com/user-attachments/assets/729ea77b-f101-4e22-988d-7f4d404dc37e" /> |
-| `METALGATE`<br>`USGC-METALGATE-ST`<br>`PN#: 5200-050`<br><img width="460" alt="METALGATE" src="https://github.com/user-attachments/assets/aa7d4900-6621-4c0d-a989-3c555ebdf1ee" /> |                                                                                   |
+| `METALGATE`<br>`USGC-METALGATE-ST`<br>`PN#: 5200-050`<br><img width="460" alt="METALGATE" src="https://github.com/user-attachments/assets/aa7d4900-6621-4c0d-a989-3c555ebdf1ee" /> |                                                                                                                                                                              |
