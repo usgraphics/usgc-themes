@@ -1,5 +1,5 @@
 # USGC Sublime Text Color Schemes
-For text only, not designed for programming (but you can).
+For text only, not designed for programming.
 
 ### Sublime Text
 Download and obtain a license here: https://www.sublimetext.com/
