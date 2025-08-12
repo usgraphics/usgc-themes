@@ -24,11 +24,11 @@ U.S. Graphics Company internal part numbers.
 Theme file names are formatted as `USGC-<THEME NAME>-<SOFTWARE CODE>`.
 
 ```text
-┌──────────────┬────────────────┐
-│ SOFTWARE CODE│ SOFTWARE NAME  │
-├──────────────┼────────────────┤
-│ ST           │ Sublime Text   │
-└──────────────┴────────────────┘
+┌───────────────┬────────────────┐
+│ SOFTWARE CODE │ SOFTWARE NAME  │
+├───────────────┼────────────────┤
+│ ST            │ Sublime Text   │
+└───────────────┴────────────────┘
 ```
 
 ### Standard colors
