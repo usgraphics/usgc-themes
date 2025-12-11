@@ -133,6 +133,17 @@ if [[ $- == *i* ]]; then
 fi
 ```
 
+# USGC Ghostty Color Scheme
+
+For macOS Ghostty only.
+
+### Instructions
+
+- Save the theme file 'USGC-RETICLE-GH' in ~/.config/ghostty/themes
+- Settings (⌘ + ,) 
+- 'theme = USGC-RETICLE-GH'
+- Save (⌘ + s) 
+- Restart Ghostty
 
 ### Part Numbers
 ```
