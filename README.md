@@ -123,6 +123,16 @@ For macOS iTerm only.
 - Select the `.itermcolors` file
 - Color Presets... > Select the imported scheme `USGC-<THEME NAME>-IT`
 
+### USGC Zsh Prompt
+```
+# USGC ZSH PROMPT
+if [[ $- == *i* ]]; then
+  export CLICOLOR=1
+  export LSCOLORS=GxFxCxDxBxegedabagaced
+  PROMPT="%{$(tput setaf 7)%}❬%m❭ %{$(tput setaf 2)%}%1~%{$(tput setaf 1)%} ●%{$(tput sgr0)%} "
+fi
+```
+
 ### USGC Bash Prompt
 ```
 # USGC BASH PROMPT
