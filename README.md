@@ -123,6 +123,19 @@ For macOS iTerm only.
 - Select the `.itermcolors` file
 - Color Presets... > Select the imported scheme `USGC-<THEME NAME>-IT`
 
+# USGC Terminal Color Schemes
+
+For macOS Terminal.app only.
+
+### Instructions
+
+- Double-click the `.terminal` file, or:
+- Settings (⌘ + ,)
+- Profiles Tab
+- ⋯ > Import...
+- Select the `.terminal` file
+- Select the imported profile `USGC-<THEME NAME>-TA` > Default
+
 ### USGC Bash Prompt
 ```
 # USGC BASH PROMPT
